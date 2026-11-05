@@ -5,7 +5,7 @@ The request stream has two segments. The first uses the Zipf popularity ranking.
 uses the same Zipf distribution over a permuted set of file IDs, which is a popularity shift.
 Arrivals are Poisson with mean interarrival time 0.2 throughout.
 
-Popularity detector (as in the notebook):
+Popularity detector:
   - reference: normalized request counts over the first L1 = 1000 requests
   - current:   normalized request counts over the last L2 = 50 requests
   - divergence: KL(reference || current) = sum reference * log(reference / current)
