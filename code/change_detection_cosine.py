@@ -5,13 +5,13 @@ The request stream has two segments. The first uses the Zipf popularity ranking.
 uses the same Zipf distribution over a permuted set of file IDs, which is a popularity shift.
 Arrivals are Poisson with mean interarrival time 0.2 throughout.
 
-Popularity detector (as in the notebook):
+Popularity detector:
   - reference: normalized request counts over the first L1 = 1000 requests
   - current:   normalized request counts over the last L2 = 50 requests
   - similarity: cosine similarity between reference and current, averaged over the last 20 values
   - flag: mean similarity < 0.3 (after 50 requests)
 
-Rate detector (as in the notebook):
+Rate detector:
   - moving average of the last 10 interarrival times
   - flag: |average - 0.2| > 0.05
 
