@@ -1,0 +1,5 @@
+results*/
+source/
+__pycache__/
+*.npz
+*.h5
